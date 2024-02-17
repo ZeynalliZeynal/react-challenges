@@ -51,7 +51,9 @@ function App() {
         </span>
         <span>{dateFormat}</span>
       </div>
-      <button onClick={handleReset}>Reset</button>
+      {(count !== 0 || step !== 1) && (
+        <button onClick={handleReset}>Reset</button>
+      )}
     </div>
   )
 }
